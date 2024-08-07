@@ -9,6 +9,15 @@
 !btop/themes/*
 !hypr/
 !hypr/*
+!hypr/alacritty/
+!hypr/alacritty/**
+!hypr/mako/
+!hypr/mako/conf/
+!hypr/mako/conf/**
+!hypr/mako/icons/
+!hypr/mako/icons/**
+!hypr/scripts/
+!hypr/scripts/**
 !Kvantum/
 !Kvantum/*
 !Kvantum/Monochrome/*
