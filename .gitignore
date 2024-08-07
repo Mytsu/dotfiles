@@ -18,6 +18,10 @@
 !hypr/mako/icons/**
 !hypr/scripts/
 !hypr/scripts/**
+!hypr/tofi/
+!hypr/tofi/**
+!hypr/waybar/
+!hypr/waybar/**
 !Kvantum/
 !Kvantum/*
 !Kvantum/Monochrome/*
