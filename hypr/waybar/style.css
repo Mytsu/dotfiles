@@ -1,0 +1,250 @@
+@import "../themes/mocha.css";
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: JetbrainsMono NFP;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @text;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+#workspaces button {
+    background: @base;
+    color: @text;
+}
+
+#workspaces button:first-child:last-child {
+    border-radius: 20px;
+}
+
+#workspaces button:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+#workspaces button:last-child {
+    border-radius: 0 20px 20px 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: @mauve;
+    color: @base;
+
+}
+
+#workspaces button.focused {
+    background: @base;
+}
+
+#workspaces button.focused:hover {
+    background: @mauve;
+    color: @base;
+    border-bottom: 3px solid @text;
+
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#mpd,
+#custom-launcher,
+#custom-power,
+#custom-weather,
+#taskbar,
+#tray,
+#idle_inhibitor,
+#mpd {
+    padding: 0 10px;
+    color: @text;
+}
+
+/*
+.modules-left>widget> :first-child {
+    margin-right: 15px;
+}
+*/
+
+#window,
+#workspaces {
+    margin: 0px 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0px;
+}
+
+#clock {
+    background-color: @mantle;
+    color: @text;
+}
+
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    color: @text;
+    background-color: @crust;
+}
+
+#memory {
+    color: @text;
+    background-color: @crust;
+}
+
+#disk {
+    color: @text;
+    background-color: @crust;
+}
+
+#backlight {
+    color: @text;
+    background-color: @crust;
+}
+
+#network {
+    color: @text;
+    background-color: @crust;
+}
+
+#network.disconnected {
+    background-color: @crust;
+    color: @red;
+}
+
+#pulseaudio {
+    color: @text;
+    background-color: @crust;
+
+}
+
+#pulseaudio.muted {
+    background-color: @mantle;
+    color: @red;
+}
+
+#custom-media.custom-spotify {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    color: @text;
+    border-radius: 20px;
+    margin-right: 5px;
+
+}
+
+#custom-media.custom-vlc {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    color: black;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+#custom-power {
+    color: @text;
+    background-color: @crust;
+
+    font-size: 18px;
+    border-radius: 0px 20px 20px 0px;
+    margin-right: 5px;
+
+}
+
+#custom-launcher {
+    color: @mauve;
+    background-color: @crust;
+    font-size: 20px;
+    border-radius: 20px 0px 0px 20px;
+    margin-left: 5px;
+}
+
+#custom-weather {
+    color: @text;
+    background-color: @crust;
+
+    font-size: 13px;
+}
+
+#bluetooth {
+    color: @text;
+    background-color: @crust;
+
+}
+
+#taskbar {
+    color: @text;
+    background-color: @crust;
+    border-radius: 0px 20px 20px 0px;
+}
+
+#temperature {
+    color: @text;
+    background-color: @crust;
+
+}
+
+#temperature.critical {
+    color: @surface0;
+    background: @red;
+}
+
+#tray {
+    color: @text;
+    background-color: @crust;
+
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+    background-color: @mantle;
+    color: @text;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @mantle;
+    color: @text;
+}
+
+#idle_inhibitor {
+    color: @text;
+    background-color: @crust;
+
+    border-radius: 20px 0px 0px 20px;
+
+}
+
+#idle_inhibitor.activated {
+    color: @green;
+    background-color: @crust;
+    border-radius: 20px 0px 0px 20px;
+}
